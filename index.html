@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Crown & Era — Timeless Horology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <h1>CROWN & ERA</h1>
+  <div class="nav-links">
+    <a href="#collection">Collection</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-overlay">
+    <h2>Time, Preserved<br>For Generations</h2>
+    <p>Curated Vintage & Heritage Timepieces</p>
+  </div>
+</section>
+
+<!-- COLLECTION -->
+<section class="section" id="collection">
+  <h3>Curated Collection</h3>
+
+  <div class="grid" id="watchGrid">
+    <!-- Watch Card -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?auto=format&fit=crop&w=900&q=80">
+      <h4>1965 Heritage Chronograph</h4>
+      <span>Collector Grade · Limited</span>
+      <p class="price">$7,200 USD</p>
+      <button onclick="openModal('1965 Heritage Chronograph')">Request to Purchase</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1511370235399-1802cae1d32f?auto=format&fit=crop&w=900&q=80">
+      <h4>1978 Swiss Automatic</h4>
+      <span>Original Dial · Serviced</span>
+      <p class="price">$4,800 USD</p>
+      <button onclick="openModal('1978 Swiss Automatic')">Request to Purchase</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=900&q=80">
+      <h4>1959 Dress Classic</h4>
+      <span>Museum Condition · Rare</span>
+      <p class="price">$12,500 USD</p>
+      <button onclick="openModal('1959 Dress Classic')">Request to Purchase</button>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section dark" id="about">
+  <h3>About Crown & Era</h3>
+  <p class="about-text">
+    Crown & Era is a private horology house specializing in vintage,
+    heritage, and collector-grade timepieces.
+    Each watch is carefully curated, authenticated, and offered
+    exclusively through private purchase inquiries.
+  </p>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <h3>Private Inquiries</h3>
+  <p class="about-text">
+    For acquisitions, partnerships, or private collections,
+    please submit a purchase inquiry.
+  </p>
+</section>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <h3>Purchase Inquiry</h3>
+    <input id="name" placeholder="Full Name">
+    <input id="email" placeholder="Email">
+    <input id="country" placeholder="Country">
+    <input id="watch" readonly>
+    <textarea id="message" placeholder="Message"></textarea>
+
+    <button onclick="submitInquiry()">Submit Inquiry</button>
+    <button class="close-btn" onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  © Crown & Era — Timeless Horology. All Rights Reserved.
+</footer>
+
+<!-- JS -->
+<script>
+const modal = document.getElementById("modal");
+
+function openModal(watchName){
+  modal.style.display = "flex";
+  document.getElementById("watch").value = watchName;
+}
+
+function closeModal(){
+  modal.style.display = "none";
+}
+
+function submitInquiry(){
+  if(!name.value || !email.value || !country.value){
+    alert("Please fill all required fields");
+    return;
+  }
+  alert("Inquiry submitted successfully!");
+  closeModal();
+}
+</script>
+
+</body>
+</html>
