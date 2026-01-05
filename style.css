@@ -1,0 +1,163 @@
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  background:#050403;
+  color:#e8d9b5;
+  font-family:'Cormorant Garamond',serif;
+}
+
+nav{
+  position:fixed;
+  top:0;width:100%;
+  padding:20px 8%;
+  display:flex;
+  justify-content:space-between;
+  background:rgba(5,4,3,.9);
+  z-index:10;
+}
+
+nav h1{
+  font-family:'Cinzel',serif;
+  letter-spacing:5px;
+  color:#d6b36a;
+}
+
+.nav-btn{
+  color:#d6b36a;
+  border:1px solid #d6b36a;
+  padding:8px 22px;
+  border-radius:30px;
+  text-decoration:none;
+}
+
+.hero{
+  height:100vh;
+  background:
+    linear-gradient(to bottom,rgba(5,4,3,.6),#050403),
+    url("https://images.unsplash.com/photo-1523275335684-37898b6baf30");
+  background-size:cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.hero h2{
+  font-family:'Cinzel',serif;
+  font-size:3.5rem;
+  color:#d6b36a;
+}
+
+.hero p{
+  max-width:500px;
+  margin:15px auto;
+  opacity:.85;
+}
+
+.section{
+  padding:100px 10%;
+  text-align:center;
+}
+
+.section h3{
+  font-family:'Cinzel',serif;
+  color:#d6b36a;
+  font-size:2.4rem;
+  margin-bottom:30px;
+}
+
+.section p{
+  max-width:720px;
+  margin:auto;
+  opacity:.85;
+}
+
+.grid{
+  margin-top:60px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:50px;
+}
+
+.card{
+  background:#0b0806;
+  border:1px solid rgba(214,179,106,.3);
+  padding:25px;
+}
+
+.card img{width:100%;margin-bottom:15px}
+
+.card h4{
+  font-family:'Cinzel',serif;
+}
+
+.price{
+  color:#d6b36a;
+  margin:10px 0;
+  font-size:1.2rem;
+}
+
+.actions{
+  display:flex;
+  gap:10px;
+}
+
+.actions a,
+.actions button{
+  flex:1;
+  padding:12px;
+  border-radius:30px;
+  border:none;
+  cursor:pointer;
+  font-family:'Cinzel',serif;
+}
+
+.buy{
+  background:linear-gradient(135deg,#d6b36a,#9c762f);
+}
+
+.assist{
+  background:#000;
+  color:#d6b36a;
+  border:1px solid #d6b36a;
+}
+
+/* MODAL */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.85);
+  display:none;
+  align-items:center;
+  justify-content:center;
+}
+
+.modal-box{
+  background:#0b0806;
+  padding:30px;
+  width:360px;
+  border:1px solid #d6b36a;
+}
+
+.modal-box input,
+.modal-box textarea{
+  width:100%;
+  margin-bottom:10px;
+  padding:10px;
+  background:#050403;
+  border:1px solid #d6b36a;
+  color:#fff;
+}
+
+.close{
+  background:#000;
+  color:#d6b36a;
+  border:1px solid #d6b36a;
+  margin-top:10px;
+}
+
+footer{
+  padding:40px;
+  text-align:center;
+  opacity:.6;
+}
